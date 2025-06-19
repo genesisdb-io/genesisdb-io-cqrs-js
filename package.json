@@ -1,18 +1,21 @@
 {
   "name": "genesisdb-cqrs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple CQRS implementation",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.js"
     }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [
     "cqrs",
