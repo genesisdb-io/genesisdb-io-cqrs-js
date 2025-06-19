@@ -1,7 +1,24 @@
 {
   "name": "genesisdb-cqrs",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "description": "A simple CQRS implementation",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "keywords": [
+    "cqrs",
+    "event sourcing",
+    "genesisdb"
+  ],
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.8.3"
